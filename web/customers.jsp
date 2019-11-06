@@ -14,24 +14,34 @@
     </head>
     <body>
         <%@include file="WEB-INF/jspf/navbar.jspf" %>
-        <h1>Clientes</h1>
-        <table border="1">
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>E-mail</th>
-            </tr>
-            <%try{%>
-                <% for (Customer c: Customer.getList()){%>
-                <tr>
-                    <td> <%= c.getId()%></td>
-                    <td><%= c.getName()%></td>
-                    <td><%= c.getEmail()%></td>
-                </tr>
-                <%}%>
-                <% } catch (Exception e ) { %>
-                <tr><td colspan="3"><%= e.getMessage() %></td></tr>
-                <% } %>
-        </table>
+        <div class="container">
+            <h1>Clientes</h1>
+            <table class="table table-striped table-dark">
+                <thead>
+                    <tr>
+                        <th>Índice</th>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                    </tr>
+                </thead>
+                <%try{%>
+                    <tbody>
+
+                    <% for (Customer c: Customer.getList()){%>
+
+                        <tr>
+                            <td scope="row">#</td>
+                            <td> <%= c.getId()%></td>
+                            <td><%= c.getName()%></td>
+                            <td><%= c.getEmail()%></td>
+                        </tr>
+                    <%}%>
+                    </tbody>
+                    <% } catch (Exception e ) { %>
+                    <tr><td colspan="3"><%= e.getMessage() %></td></tr>
+                    <% } %>
+            </table>
+        </div>
     </body>
 </html>
