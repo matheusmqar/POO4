@@ -1,13 +1,19 @@
+.main{
+    margin-top: 50px;
+}
+
 .image{
     height: 200px;
     width: 200px;
 }
 
 .client-div h2{
+    margin-top: 10px;
     margin-left: 35px;
 }
 
 
 .manu-div h2{
+    margin-top: 10px;
     margin-left: 35px;
 }
