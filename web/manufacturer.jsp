@@ -18,17 +18,23 @@
         <h1>Fabricantes</h1>
         <table border="1">
             <tr>
+                <th>Índice</th>
                 <th>ID</th>
                 <th>Nome</th>
                 <th>E-mail</th>
+                <th>Estado</th>
+                <th>Cidade</th>
             </tr>
             <%try{%>
-                <% for (Manufacturer m: Manufacturer.getList()){%>
+            
+                <% for (int i = 0; i<Manufacturer.getList().size(); i++){%>
+                <%Manufacturer m = Manufacturer.getList().get(i);%>
                 <tr>
-                    <td> <%= m.getId()%></td>
+                    <td scope="row"><%=i+1%></td>
+                    <td><%= m.getId()%></td>
                     <td><%= m.getName()%></td>
                     <td><%= m.getEmail()%></td>
-                     <td><%= m.getState()%></td>
+                    <td><%= m.getState()%></td>
                     <td><%= m.getCity()%></td>
                 </tr>
                 <%}%>
