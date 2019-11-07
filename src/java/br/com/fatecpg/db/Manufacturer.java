@@ -15,7 +15,7 @@ public class Manufacturer {
     private String state;
 
 
-    public Manufacturer(int id, String name, String email) {
+    public Manufacturer(int id, String name, String email, String city, String state) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -24,7 +24,7 @@ public class Manufacturer {
     }
 
        public static ArrayList<Manufacturer> getList() throws Exception {
-        ArrayList<Manufacturer> list = new ArrayList<>();
+       ArrayList<Manufacturer> list = new ArrayList<>();
         Class.forName("org.apache.derby.jdbc.ClientDriver");
         String url = "jdbc:derby://localhost:1527/sample";
         String user = "app";
@@ -34,7 +34,7 @@ public class Manufacturer {
         String sql = "SELECT MANUFACTURER_ID, NAME, EMAIL, STATE, CITY FROM MANUFACTURER";
         ResultSet rs = stmt.executeQuery(sql);
         while (rs.next()){
-            Manufacturer c = new Manufacturer (rs.getInt("MANUFACTURER_ID"), rs.getString("NAME"),rs.getString("EMAIL"));
+            Manufacturer c = new Manufacturer (rs.getInt("MANUFACTURER_ID"), rs.getString("NAME"),rs.getString("EMAIL"),rs.getString("STATE"), rs.getString("CITY"));
             list.add(c);
         }
         return list;

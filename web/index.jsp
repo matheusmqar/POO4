@@ -21,7 +21,7 @@
            </div>
            <div class=" col-md-3 manu-div">
               <img src="images/manu.png" class="image" alt="#">
-              <h2><a class="btn btn-info btn-lg" href="customers.jsp">Fabricantes</a></h2>
+              <h2><a class="btn btn-info btn-lg" href="manufacturer.jsp">Fabricantes</a></h2>
            </div>
         </div>
  
