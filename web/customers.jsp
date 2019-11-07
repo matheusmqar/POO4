@@ -28,10 +28,10 @@
                 <%try{%>
                     <tbody>
 
-                    <% for (Customer c: Customer.getList()){%>
-
+                    <% for (int i = 0; i<Customer.getList().size(); i++){%>
+                        <%Customer c= Customer.getList().get(i);%>
                         <tr>
-                            <td scope="row">#</td>
+                            <td scope="row"><%=i+1%></td>
                             <td> <%= c.getId()%></td>
                             <td><%= c.getName()%></td>
                             <td><%= c.getEmail()%></td>
