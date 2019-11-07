@@ -12,35 +12,41 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Fabricantes - JavaDB</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/estilo.css">
     </head>
     <body>
         <%@include file="WEB-INF/jspf/navbar.jspf" %>
-        <h1>Fabricantes</h1>
-        <table border="1">
-            <tr>
-                <th>Índice</th>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>E-mail</th>
-                <th>Estado</th>
-                <th>Cidade</th>
-            </tr>
-            <%try{%>
-            
-                <% for (int i = 0; i<Manufacturer.getList().size(); i++){%>
-                <%Manufacturer m = Manufacturer.getList().get(i);%>
-                <tr>
-                    <td scope="row"><%=i+1%></td>
-                    <td><%= m.getId()%></td>
-                    <td><%= m.getName()%></td>
-                    <td><%= m.getEmail()%></td>
-                    <td><%= m.getState()%></td>
-                    <td><%= m.getCity()%></td>
-                </tr>
-                <%}%>
-                <% } catch (Exception e ) { %>
-                <tr><td colspan="3"><%= e.getMessage() %></td></tr>
-                <% } %>
-        </table>
+        <div class="container">
+                <h2>Fabricantes</h2>
+                <table class="table table-striped table-dark">
+                    <thead>
+                        <tr>
+                            <th>Índice</th>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Estado</th>
+                            <th>Cidade</th>
+                        </tr>
+                    </thead>
+                    <%try{%>
+
+                        <% for (int i = 0; i<Manufacturer.getList().size(); i++){%>
+                        <%Manufacturer m = Manufacturer.getList().get(i);%>
+                        <tr>
+                            <td><%=i+1%></td>
+                            <td><%= m.getId()%></td>
+                            <td><%= m.getName()%></td>
+                            <td><%= m.getEmail()%></td>
+                            <td><%= m.getState()%></td>
+                            <td><%= m.getCity()%></td>
+                        </tr>
+                        <%}%>
+                        <% } catch (Exception e ) { %>
+                        <tr><td colspan="3"><%= e.getMessage() %></td></tr>
+                        <% } %>
+                </table>
+        </div><!--container-->
     </body>
 </html>
