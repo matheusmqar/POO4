@@ -28,6 +28,8 @@
                     <td> <%= m.getId()%></td>
                     <td><%= m.getName()%></td>
                     <td><%= m.getEmail()%></td>
+                     <td><%= m.getState()%></td>
+                    <td><%= m.getCity()%></td>
                 </tr>
                 <%}%>
                 <% } catch (Exception e ) { %>

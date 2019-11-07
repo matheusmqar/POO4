@@ -11,12 +11,16 @@ public class Manufacturer {
     private int id;
     private String name;
     private String email;
+    private String city;
+    private String state;
 
 
     public Manufacturer(int id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;
+        this.state = state;
+        this.city = city; 
     }
 
        public static ArrayList<Manufacturer> getList() throws Exception {
@@ -27,7 +31,7 @@ public class Manufacturer {
         String pass = "app";
         Connection con = DriverManager.getConnection(url, user, pass);
         Statement stmt = con.createStatement();
-        String sql = "SELECT MANUFACTURER_ID, NAME, EMAIL FROM MANUFACTURER";
+        String sql = "SELECT MANUFACTURER_ID, NAME, EMAIL, STATE, CITY FROM MANUFACTURER";
         ResultSet rs = stmt.executeQuery(sql);
         while (rs.next()){
             Manufacturer c = new Manufacturer (rs.getInt("MANUFACTURER_ID"), rs.getString("NAME"),rs.getString("EMAIL"));
@@ -58,6 +62,21 @@ public class Manufacturer {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+    public String getState() {
+        return state;
+    }
+    
+    public void setState(String state) {
+        this.state = state;
+    }
+    
+    public String getCity() {
+        return city;
+    }
+    
+    public void setCity(String city) {
+        this.city = city;
     }
     
     
