@@ -13,7 +13,7 @@
   <body>
      <%@include file="WEB-INF/jspf/navbar.jspf" %>
      
-    <div class="container">
+    <div class="container teste">
         <div class="row justify-content-center main">
            <div class="col-md-3 client-div">
               <img src="images/client.png" class="image" alt="#">
@@ -26,9 +26,7 @@
         </div>
  
      </div><!--container-->
-     <div class="span">
-         <br/><br/><br/><!-- Gambiarra, por algum motivo o margin não funcionou-->
-     </div>
+     
      <%@include file="WEB-INF/jspf/footer.jspf" %>
      
     <!-- Optional JavaScript -->
