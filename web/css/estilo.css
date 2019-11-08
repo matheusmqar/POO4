@@ -1,7 +1,5 @@
 .main{
-    display: inline-block;
     margin-top: 50px;
-    margin-bottom: 50px;
 }
 
 .image{
@@ -9,14 +7,9 @@
     width: 200px;
 }
 
-
 .client-div h2{
     margin-top: 10px;
     margin-left: 35px;
-}
-
-.teste{
-    margin-bottom: 500px;
 }
 
 
@@ -24,4 +17,3 @@
     margin-top: 10px;
     margin-left: 35px;
 }
-
