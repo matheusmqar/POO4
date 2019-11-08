@@ -14,7 +14,9 @@
      <%@include file="WEB-INF/jspf/navbar.jspf" %>
      
      <div class="container">
+        
         <div class="row justify-content-center main">
+           
            <div class="col-md-3 client-div">
               <img src="images/client.png" class="image" alt="#">
               <h2><a class="btn btn-info btn-lg" href="customers.jsp">Clientes</a></h2>
@@ -26,6 +28,9 @@
         </div>
  
      </div><!--container-->
+     <div class="teste">
+         <br><br><br><br><!--- Gambiarra. Por algum motivo o magin não funcionou. -->
+     </div>
      <%@include file="WEB-INF/jspf/footer.jspf" %>
      
     <!-- Optional JavaScript -->
