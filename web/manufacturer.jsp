@@ -42,7 +42,7 @@
                             <td><%= m.getEmail()%></td>
                             <td><%= m.getState()%></td>
                             <td><%= m.getCity()%></td>
-                            <td><a href="manufacturerProduct.jsp?i=<%=m.getId()%>">Ver pedidos</a></td>
+                            <td><a href="manufacturerProduct.jsp?i=<%=m.getId()%>">Ver produtos</a></td>
                         </tr>
                         <%}%>
                         <% } catch (Exception e ) { %>

@@ -97,7 +97,7 @@ public class Products {
         this.markup = markup;
     }
 
-    public boolean isAvailable() {
+    public boolean isAvailable() {  
         return available;
     }
 
