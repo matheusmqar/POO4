@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Clientes - JavaDB</title>
+        <title>Clientes</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="css/estilo.css">
     </head>
@@ -25,6 +25,7 @@
                             <th>ID</th>
                             <th>Nome</th>
                             <th>E-mail</th>
+                            <th>Lista de Compras</th>
                         </tr>
                     </thead>
                     <%try{%>
@@ -37,6 +38,7 @@
                                 <td> <%= c.getId()%></td>
                                 <td><%= c.getName()%></td>
                                 <td><%= c.getEmail()%></td>
+                                <td><a href="customerOrder.jsp?i=<%=c.getId()%>">Ver pedidos</a></td>
                             </tr>
                         <%}%>
                         </tbody>
@@ -44,6 +46,6 @@
                         <tr><td colspan="3"><%= e.getMessage() %></td></tr>
                         <% } %>
                 </table>
-        </div><!--container-->
+        </div>
     </body>
 </html>
